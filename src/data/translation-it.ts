@@ -21,27 +21,59 @@ export const projectsDataIT: Project[] = [
     link: "https://github.com",
     image: "/receiptapp.jpeg",
     isCommercial: false
+  },
+  {
+    title: "Futura Automotive Platform",
+    subtitle: "Corporate Showroom & Tailored Content Management System (Built at Networkers)",
+    metric: "Zero-Friction Admin UX",
+    description: "Progettazione e ingegnerizzazione di un catalogo di veicoli ad alte prestazioni per una concessionaria moderna. Architettura di un backend custom altamente intuitivo, esplicitamente progettato per clienti non tecnici, per aggiornamenti quotidiani dell'inventario senza alcuna formazione.",
+    badge: "WordPress / Custom CMS / Admin UX",
+    link: "https://futuracar.net",
+    image: "/futuracar-it.png",
+    isCommercial: true
   }
 ];
+
+interface MinorProject {
+  year: string;
+  title: string;
+  description: string;
+  link: string;
+}
+
+export const minorProjectsIT: MinorProject[] = [
+  {
+    year: "2026",
+    title: "Technobuild Website",
+    description: "Sito WordPress costruito con Divi Builder e CSS personalizzato",
+    link: "https://technobuild.sviluppo-networkers.it"
+  },
+  {
+    year: "2026",
+    title: "Collina delle Rondini Website",
+    description: "Un sito WordPress costruito con Divi Builder, CSS personalizzato e JavaScript per un'esperienza utente unica.",
+    link: "https://lacollinadellerondini.it"
+  }
+];  
 
 // 2. La Filosofia tradotta
 export const matrixPointsIT = [
   {
     title: "Il Vantaggio Ibrido",
-    description: "La maggior parte degli sviluppatori odia il design, la maggior parte dei designer teme il terminale. Io amo entrambi in egual misura. Trovo la stessa adrenalina nel perfezionare un layout UI e nel risolvere un errore TypeScript.",
+    description: "La maggior parte degli sviluppatori odia il design, la maggior parte dei designer teme il codice. Io amo entrambi in egual misura. Trovo la stessa adrenalina nel perfezionare un layout UI e nel risolvere un problema di logica complesso. Questo mi permette di costruire prodotti digitali con un approccio completo, senza compromessi.",
     bgClass: "bg-brand-yellow text-brand-bg",
     numberClass: "text-brand-bg/60"
   },
   {
-    title: "Basi Vanilla Eccezionali",
-    description: "Non ho imparato solo scorciatoie da framework. La mia formazione software (En.A.I.P.) si è concentrata su JavaScript Vanilla puro (ES6+), PHP a oggetti e database relazionali SQL.",
-    bgClass: "bg-brand-cyan text-brand-bg",
-    numberClass: "text-brand-bg/60"
+  title: "Dalle Basi al Futuro",
+  description: "Non mi piacciono le scorciatoie alla cieca: amo capire il perché delle cose. Per questo sono partita dalle fondamenta native come JavaScript Vanilla (ES6+), OOP PHP e database SQL, un controllo profondo che oggi mi permette di padroneggiare con rapidità ed efficacia i framework e le architetture moderne più recenti.",
+  bgClass: "bg-brand-cyan text-brand-bg",
+  numberClass: "text-brand-bg/60"
   },
   {
     title: "Cultura Internazionale",
     description: "Con un livello C2 in inglese, studi di arti visive multimediali e una mentalità da remoto adattiva, sono strutturalmente pronta a integrarmi in team di prodotto cross-border fin dal primo giorno.",
-    bgClass: "bg-brand-yellow text-brand-bg",
+    bgClass: "bg-brand-blue text-brand-bg",
     numberClass: "text-brand-bg/60"
   }
 ];
@@ -68,3 +100,8 @@ export const navTextIT = {
   navPhilosophy: "Filosofia",
   navContact: "Contatti"
 };
+
+export const skillsIT = [
+  "React", "TypeScript", "Next.js", "Astro", "Tailwind CSS", 
+  "JavaScript Vanilla", "Ingegneria UI", "UX Backend", "PHP", "SQL", "Git"
+];

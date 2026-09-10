@@ -5,8 +5,10 @@ import Hero from '../components/Hero';
 import ProjectsSection from '../components/ProjectsSection';
 import MatrixSection from '../components/Matrix';
 import Footer from '../components/Footer';
+import Skills from '../components/Skills';
+import MinorProjects from '../components/MinorProjects';
 
-import { projectsDataIT, matrixPointsIT, heroTextIT, footerTextIT, navTextIT } from '../data/translation-it';
+import { projectsDataIT, matrixPointsIT, heroTextIT, footerTextIT, navTextIT, skillsIT, minorProjectsIT } from '../data/translation-it';
 ---
 
 <html lang="it">
@@ -37,6 +39,8 @@ import { projectsDataIT, matrixPointsIT, heroTextIT, footerTextIT, navTextIT } f
         buttonContact={heroTextIT.buttonContact}
       />
       
+	  <Skills client:load skills={skillsIT} /> 
+
       <div class="max-w-6xl w-full px-6">
         <ProjectsSection 
           client:load 
@@ -44,7 +48,16 @@ import { projectsDataIT, matrixPointsIT, heroTextIT, footerTextIT, navTextIT } f
           title="Progetti Selezionati" 
           subtitle="Lavori in Evidenza"
         />
+
       </div>
+
+      	<div class="max-w-6xl w-full px-6">
+			<MinorProjects 
+				client:load 
+				sectionTitle="Altri Progetti" 
+				projects={minorProjectsIT} 
+			/>
+			</div>
       
       <div id="philosophy" class="max-w-6xl w-full px-6">
         <MatrixSection 

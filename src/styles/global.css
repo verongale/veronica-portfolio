@@ -1,12 +1,33 @@
 @import "tailwindcss";
 
+
 @theme {
   --color-brand-bg: #0b0c10;
   --color-brand-yellow: #dcf800;
   --color-brand-cyan: #38ef7d;
+  --color-brand-blue: #44C1D5;
   --color-brand-text: #f3f4f6;
-  --color-brand-muted: #9ca3af;
+  --color-brand-muted: #9ca3af;cd
+
 
   --font-sans: 'Inter', sans-serif;
   --font-display: 'Syne', sans-serif;
 }
+
+@utility marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 55s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); } 
+  /* makes it a loop by moving the content to the left by 50% of its width */
+}
+
+/* stop the marquee animation on hover */
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+

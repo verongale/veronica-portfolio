@@ -23,7 +23,7 @@ export default function Footer({ title, description, buttonText }: FooterProps) 
           href="https://www.linkedin.com/in/veronica-galeazzo-82299323a/?locale=en" 
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full md:w-auto text-center bg-brand-text text-brand-bg font-bold px-8 py-4 rounded-xl transition-transform hover:scale-105 duration-200 block shadow-lg font-sans text-sm tracking-wide"
+          className="w-full md:w-auto text-center bg-brand-text text-brand-bg font-bold px-8 py-4 rounded-xl transition-transform hover:bg-gradient-to-r hover:from-brand-yellow hover:to-brand-cyan duration-200 block shadow-lg font-sans text-sm tracking-wide"
         >
           {buttonText}
         </a>

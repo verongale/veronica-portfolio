@@ -10,7 +10,7 @@ interface HeroProps {
 
 export default function Hero({ welcome, titleBefore, role, manifesto, buttonWork, buttonContact }: HeroProps) {
   return (
-    <section className="relative w-[95vw] min-h-[90vh] mx-auto rounded-3xl overflow-hidden flex items-center p-8 md:p-16 selection:bg-brand-cyan selection:text-brand-bg bg-brand-bg">
+    <section className="relative w-[95vw] min-h-[85vh] mx-auto rounded-3xl overflow-hidden flex items-center p-8 md:p-16 selection:bg-brand-cyan selection:text-brand-bg bg-brand-bg">
       
       {/* Sfondo: Immagine a colori con effetto blur e overlay scuro integrati */}
       <div className="absolute inset-0 w-full h-full z-0 pointer-events-none overflow-hidden">

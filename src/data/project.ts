@@ -31,8 +31,43 @@ export const projectsData: Project[] = [
     link: "https://github.com/verongale/receiptapp",
     image: "/receiptapp.jpeg",
     isCommercial: false
+  },
+  
+  {
+  title: "Futura Automotive Platform",
+  subtitle: "Corporate Showroom & Tailored Content Management System (Built at Networkers)",
+  metric: "Zero-Friction Admin UX",
+  description: "Engineered a high-performance vehicle catalog platform for a modern automotive dealership. Architected a custom, highly intuitive backend content framework explicitly tailored for non-technical clients, enabling seamless daily vehicle inventory updates with zero training requirements.",
+  badge: "WordPress / Custom CMS / Admin UX",
+  link: "https://futuracar.net",
+  image: "/futuracar-it.png",
+  isCommercial: true
+}
+
+];
+
+export interface MinorProject {
+  year: string;
+  title: string;
+  description: string;
+  link: string;
+}
+
+export const minorProjectsEN: MinorProject[] = [
+  {
+    year: "2025",
+    title: "Technobuild Website",
+    description: "Wordpress website built with Divi Builder and Custom CSS",
+    link: "https://technobuild.sviluppo-networkers.it"
+  },
+  {
+    year: "2026",
+    title: "Collina delle Rondini Website",
+    description: "Wordpress website built with Divi Builder, Custom CSS and JavaScript",
+    link: "https://lacollinadellerondini.it"
   }
 ];
+
 
 export const matrixPointsEN = [
   {
@@ -42,15 +77,16 @@ export const matrixPointsEN = [
     numberClass: "text-brand-bg/60"
   },
   {
-    title: "Vanilla Engineering Foundations",
-    description: "I didn't just learn framework shortcuts. My software engineering training at En.A.I.P. focused on pure, native Vanilla JavaScript (ES6+), Object-Oriented PHP, and relational SQL database design.",
-    bgClass: "bg-brand-cyan text-brand-bg",
-    numberClass: "text-brand-bg/60"
-  },
+  title: "Foundations to Future",
+  description: "I don't rely on blind shortcuts; I need to understand how things work under the hood. Starting from core fundamentals like pure Vanilla JavaScript (ES6+), OOP PHP, and SQL databases gave me a deep control that now allows me to master modern frameworks and cutting-edge architectures with speed and precision.",
+  bgClass: "bg-brand-cyan text-brand-bg",
+  numberClass: "text-brand-bg/60"
+}
+,
   {
     title: "International & Agile Culture",
     description: "With a certified C2 level in English, multimedia visual arts training at UCLA (USA), and an adaptable remote mindset, I am structurally ready to integrate into cross-border product teams from day one.",
-    bgClass: "bg-brand-yellow text-brand-bg",
+    bgClass: "bg-brand-blue text-brand-bg",
     numberClass: "text-brand-bg/60"
   }
 ];
@@ -76,3 +112,8 @@ export const navTextEN = {
   navPhilosophy: "Philosophy",
   navContact: "Contact"
 };
+
+export const skillsEN = [
+  "React", "TypeScript", "Next.js", "Astro", "Tailwind CSS", 
+  "Vanilla JavaScript", "UI Engineering", "Admin UX", "PHP", "SQL", "Git"
+];
