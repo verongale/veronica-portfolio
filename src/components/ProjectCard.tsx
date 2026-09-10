@@ -9,7 +9,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <div className="group bg-white/[0.02] border border-white/10 rounded-2xl overflow-hidden flex flex-col justify-between backdrop-blur-md transition-all duration-300 hover:border-white/20 hover:bg-white/[0.04]">
       
-      
       <div className="relative w-full h-68 overflow-hidden border-b border-white/5 bg-neutral-900">
         <img 
           src={project.image} 
@@ -19,15 +18,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <div className="absolute inset-0 bg-gradient-to-t from-[#060709] via-transparent to-transparent opacity-60"></div>
       </div>
 
-      
       <div className="p-6 flex-1 flex flex-col justify-between space-y-6">
         <div className="space-y-4">
           
           <div className="flex justify-between items-start">
             <div>
-            <span className="text-[10px] -ml-1 tracking-wider uppercase px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-brand-text font-bold">
-              {project.isCommercial ? 'Commercial' : 'R&D'}
-            </span>
+              <span className="text-[10px] -ml-1 tracking-wider uppercase px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-brand-text font-bold">
+                {project.isCommercial ? 'Commercial' : 'R&D'}
+              </span>
               <h3 className="text-2xl font-bold text-brand-text tracking-tight pt-2">
                 {project.title}
               </h3>
@@ -35,7 +33,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 {project.subtitle}
               </p>
             </div>
-            
           </div>
 
           <div className="pt-2">
@@ -62,7 +59,12 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             rel="noopener noreferrer" 
             className="text-xs font-bold text-brand-text hover:text-brand-cyan transition-colors flex items-center space-x-1"
           >
-            <span>{project.isCommercial ? 'Visit Site' : 'View Code'}</span>
+            <span>
+              {project.link.includes('github.com') 
+                ? (project.description.includes('Un tracciatore') ? 'Vedi Codice' : 'View Code')
+                : (project.description.includes('Un tracciatore') ? 'Visita Sito' : 'Visit Site')
+              }
+            </span>
             <span>→</span>
           </a>
         </div>

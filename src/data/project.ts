@@ -50,13 +50,15 @@ export const matrixPointsEN = [
   {
     title: "International & Agile Culture",
     description: "With a certified C2 level in English, multimedia visual arts training at UCLA (USA), and an adaptable remote mindset, I am structurally ready to integrate into cross-border product teams from day one.",
-    bgClass: "bg-gradient-to-br from-brand-yellow to-brand-cyan text-brand-bg",
+    bgClass: "bg-brand-yellow text-brand-bg",
     numberClass: "text-brand-bg/60"
   }
 ];
 
 export const heroTextEN = {
   welcome: "Available for EU Remote Contracting (VIES VAT)",
+  titleBefore: "Hi, I'm",
+  role: "Design Engineer & Front-End Developer",
   manifesto: "I bridge the gap between creative composition and type-safe code. I love the creative rush of designing an interface, but I get the exact same satisfaction from engineering the logic to make it work flawlessly. For me, the entire production workflow and the continuous study behind it is pure adrenaline.",
   buttonWork: "View Work",
   buttonContact: "Let's Connect"
@@ -66,4 +68,11 @@ export const footerTextEN = {
   title: "Let's build something together.",
   description: "I am currently looking for remote roles and B2B contracting opportunities across Europe.",
   buttonText: "Connect on LinkedIn"
+};
+
+export const navTextEN = {
+  linkHome: "/",
+  navProjects: "Projects",
+  navPhilosophy: "Philosophy",
+  navContact: "Contact"
 };

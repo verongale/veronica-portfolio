@@ -6,10 +6,10 @@ import ProjectsSection from '../components/ProjectsSection';
 import MatrixSection from '../components/Matrix';
 import Footer from '../components/Footer';
 
-import { projectsData, matrixPointsEN, heroTextEN, footerTextEN, navTextEN } from '../data/project';
+import { projectsDataIT, matrixPointsIT, heroTextIT, footerTextIT, navTextIT } from '../data/translation-it';
 ---
 
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -19,48 +19,48 @@ import { projectsData, matrixPointsEN, heroTextEN, footerTextEN, navTextEN } fro
     
     <Navbar 
       client:load 
-      linkHome={navTextEN.linkHome}
-      navProjects={navTextEN.navProjects}
-      navPhilosophy={navTextEN.navPhilosophy}
-      navContact={navTextEN.navContact}
+      linkHome={navTextIT.linkHome}
+      navProjects={navTextIT.navProjects}
+      navPhilosophy={navTextIT.navPhilosophy}
+      navContact={navTextIT.navContact}
     />
     
     <main class="w-full flex flex-col items-center pt-5 pb-16 space-y-24">
       
       <Hero 
         client:load
-        welcome={heroTextEN.welcome}
-        titleBefore={heroTextEN.titleBefore}
-        role={heroTextEN.role}
-        manifesto={heroTextEN.manifesto}
-        buttonWork={heroTextEN.buttonWork}
-        buttonContact={heroTextEN.buttonContact}
+        welcome={heroTextIT.welcome}
+        titleBefore={heroTextIT.titleBefore}
+        role={heroTextIT.role}
+        manifesto={heroTextIT.manifesto}
+        buttonWork={heroTextIT.buttonWork}
+        buttonContact={heroTextIT.buttonContact}
       />
       
       <div class="max-w-6xl w-full px-6">
         <ProjectsSection 
           client:load 
-          projects={projectsData} 
-          title="Selected Projects" 
-          subtitle="Case Studies"
+          projects={projectsDataIT} 
+          title="Progetti Selezionati" 
+          subtitle="Lavori in Evidenza"
         />
       </div>
       
       <div id="philosophy" class="max-w-6xl w-full px-6">
         <MatrixSection 
           client:load 
-          sectionTitle="Why I Build Differently" 
-          sectionSubtitle="Philosophy" 
-          points={matrixPointsEN} 
+          sectionTitle="Perché Progetto Diversamente" 
+          sectionSubtitle="Filosofia" 
+          points={matrixPointsIT} 
         />
       </div>
       
       <div class="max-w-6xl w-full px-6">
         <Footer 
           client:load 
-          title={footerTextEN.title}
-          description={footerTextEN.description}
-          buttonText={footerTextEN.buttonText}
+          title={footerTextIT.title}
+          description={footerTextIT.description}
+          buttonText={footerTextIT.buttonText}
         />
       </div>
     </main>

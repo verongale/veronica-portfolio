@@ -1,6 +1,14 @@
 import React from 'react';
+interface HeroProps {
+  welcome: string;
+  titleBefore: string;
+  role: string;
+  manifesto: string;
+  buttonWork: string;
+  buttonContact: string;
+}
 
-export default function Hero() {
+export default function Hero({ welcome, titleBefore, role, manifesto, buttonWork, buttonContact }: HeroProps) {
   return (
     <section className="relative w-[95vw] min-h-[90vh] mx-auto rounded-3xl overflow-hidden flex items-center p-8 md:p-16 selection:bg-brand-cyan selection:text-brand-bg bg-brand-bg">
       
@@ -21,23 +29,23 @@ export default function Hero() {
         <div className="inline-flex items-center space-x-2 px-2 py-1.5 ">
           <span className="w-2 h-2 bg-brand-yellow"></span>
           <span className="text-[12px] font-regular text-brand-text tracking-wide uppercase font-sans">
-            Available for EU Remote Contracting (VIES VAT)
+            {welcome}
           </span>
         </div>
 
         <h1 className="text-4xl md:text-6xl font-bold tracking-tighter text-brand-text font-display leading-[1.1]">
-          Hi, I'm <br className="md:hidden" />
+          {titleBefore} <br className="md:hidden" />
           <span className="bg-gradient-to-r from-brand-yellow to-brand-cyan bg-clip-text text-transparent">
             Veronica Galeazzo
           </span>
         </h1>
 
         <h2 className="text-sm md:text-base font-semibold text-brand-text uppercase tracking-widest font-sans">
-          Design Engineer & Front-End Developer
+          {role}
         </h2>
 
         <p className="text-base text-brand-text/90 leading-relaxed font-sans font-normal max-w-2xl drop-shadow-md">
-          I bridge the gap between creative composition and type-safe systems. I find the exact same adrenaline rush in crafting a pixel-perfect, conversion-driven user interface and in debugging a complex state management error in TypeScript.
+          {manifesto}
         </p>
 
         <div className="flex space-x-4 pt-2">
@@ -45,13 +53,13 @@ export default function Hero() {
             href="#projects" 
             className="bg-brand-text text-brand-bg font-bold font-display px-6 py-3 rounded-xl transition-all duration-300 hover:bg-gradient-to-r hover:from-brand-yellow hover:to-brand-cyan text-center text-sm tracking-wide shadow-lg"
           >
-            View Work
+            {buttonWork}
           </a>
           <a 
-            href="mailto:galeazzo.ve@gmail.com" 
+            href="#contact" 
             className="bg-white/5 border border-white/10 hover:bg-white/10 text-brand-text font-medium font-display px-6 py-3 rounded-xl transition-all duration-200 text-center text-sm"
           >
-            Get In Touch
+            {buttonContact}
           </a>
         </div>
 

@@ -1,9 +1,19 @@
 import React, { useState, useEffect } from 'react';
 
-export default function Navbar() {
+interface NavbarProps {
+  linkHome: string;
+  navProjects: string;
+  navPhilosophy: string;
+  navContact: string;
+}
+
+export default function Navbar({ linkHome, navProjects, navPhilosophy, navContact }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [currentPath, setCurrentPath] = useState('');
 
   useEffect(() => {
+    setCurrentPath(window.location.pathname);
+
     const handleScroll = () => {
       if (window.scrollY > 20) {
         setIsScrolled(true);
@@ -16,6 +26,8 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const isIt = currentPath.includes('/it');
+
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 selection:bg-brand-cyan selection:text-brand-bg ${
       isScrolled 
@@ -24,7 +36,7 @@ export default function Navbar() {
     }`}>
       <div className="max-w-4xl mx-auto px-6 h-16 flex justify-between items-center">
         
-        <a href="#" className="flex items-center transition-transform hover:scale-102 duration-200">
+        <a href={linkHome} className="flex items-center transition-transform hover:scale-102 duration-200">
           <img 
             src="/vg-logo.png" 
             alt="Veronica Galeazzo Logo" 
@@ -32,15 +44,24 @@ export default function Navbar() {
           />
         </a>
 
-        <div className="flex space-x-6 text-lg font-medium text-brand-muted font-display">
+        <div className="flex space-x-6 text-lg font-medium text-brand-muted font-display items-center">
           <a href="#projects" className="hover:text-brand-text transition-colors">
-            Projects
+            {navProjects}
           </a>
           <a href="#philosophy" className="hover:text-brand-text transition-colors">
-            Philosophy
+            {navPhilosophy}
           </a>
-          <a href="https://www.linkedin.com/in/veronica-galeazzo-82299323a/?locale=en" className="text-brand-text hover:text-brand-cyan transition-colors font-bold">
-            Contact
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-brand-text hover:text-brand-cyan transition-colors font-bold">
+            {navContact}
+          </a>
+
+          <div className="w-[1px] h-4 bg-white/10 mx-1"></div>
+
+          <a 
+            href={isIt ? '/' : '/it'} 
+            className="text-xs font-mono px-2 py-1 rounded bg-white/5 border border-white/10 text-brand-text hover:bg-white/10 hover:border-brand-cyan transition-all uppercase tracking-wider font-bold"
+          >
+            {isIt ? 'en' : 'it'}
           </a>
         </div>
 
