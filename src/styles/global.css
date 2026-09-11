@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
-
+:root {
+  color-scheme: only light;
+} 
 @theme {
   --color-brand-bg: #0b0c10;
   --color-brand-yellow: #dcf800;
