@@ -1,0 +1,205 @@
+---
+import '../../src/styles/global.css';
+import { cvDataEN , navCvTextEN } from '../data/project';
+import NavbarCv from '../components/NavbarCv';
+
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="Curriculum Vitae of Veronica Galeazzo — Web Designer & Front-End Developer."
+    />
+    <title>Veronica Galeazzo | CV</title>
+  </head>
+
+  <body class="bg-brand-bg text-brand-text antialiased">
+
+    <NavbarCv
+      client:load 
+      linkHome={navCvTextEN.linkHome}
+      navProjects={navCvTextEN.navProjects}
+      navCv={navCvTextEN.navCv}
+      navContact={navCvTextEN.navContact}
+    />
+
+   
+
+    <main class="max-w-6xl mx-auto mt-16 px-6 py-16 md:py-24">
+
+      <section class="mb-20">
+        <p class="text-sm font-mono uppercase tracking-widest text-brand-cyan mb-4">
+          {cvDataEN.header.label}
+        </p>
+
+        <h1 class="text-4xl md:text-6xl font-bold font-display tracking-tight mb-5">
+          {cvDataEN.header.name}
+        </h1>
+
+        <p class="text-xl md:text-2xl text-brand-muted font-display">
+          {cvDataEN.header.role}
+        </p>
+
+        <p class="max-w-3xl mt-8 text-base md:text-lg leading-relaxed text-brand-muted">
+          {cvDataEN.header.intro}
+        </p>
+      </section>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
+
+        <div class="lg:col-span-2 space-y-20">
+
+          <section>
+            <h2 class="text-2xl md:text-3xl font-bold font-display mb-8">
+              {cvDataEN.profile.title}
+            </h2>
+
+            <p class="text-brand-muted leading-relaxed text-base md:text-lg">
+              {cvDataEN.profile.text}
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl md:text-3xl font-bold font-display mb-10">
+              {cvDataEN.experienceTitle}
+            </h2>
+
+            <div class="space-y-12">
+              {cvDataEN.experience.map((job, index) => (
+                <article
+                  class={`border-l pl-6 ${
+                    index === 0
+                      ? 'border-brand-cyan/40'
+                      : 'border-white/10'
+                  }`}
+                >
+                  <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2 mb-3">
+                    <h3 class="text-xl font-semibold font-display">
+                      {job.role}
+                    </h3>
+
+                    <span class="text-sm font-mono text-brand-muted">
+                      {job.period}
+                    </span>
+                  </div>
+
+                  <ul class="space-y-2 text-brand-muted leading-relaxed">
+                    {job.responsibilities.map((item) => (
+                      <li>• {item}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 class="text-2xl md:text-3xl font-bold font-display mb-10">
+              {cvDataEN.educationTitle}
+            </h2>
+
+            <div class="space-y-10">
+              {cvDataEN.education.map((item) => (
+                <article>
+                  <h3 class="text-lg font-semibold font-display">
+                    {item.title}
+                  </h3>
+
+                  <p class="text-brand-muted mt-2 leading-relaxed">
+                    {item.description}
+                  </p>
+
+                  {item.qualification && (
+                    <p class="text-sm text-brand-muted mt-2">
+                      {item.qualification}
+                    </p>
+                  )}
+                </article>
+              ))}
+            </div>
+          </section>
+
+        </div>
+
+        <aside class="space-y-12">
+
+          <section>
+            <h2 class="text-xl font-bold font-display mb-6">
+              {cvDataEN.skillsTitle}
+            </h2>
+
+            <div class="space-y-6">
+              {cvDataEN.skills.map((group) => (
+                <div>
+                  <h3 class="text-sm font-mono uppercase tracking-wider text-brand-cyan mb-3">
+                    {group.category}
+                  </h3>
+
+                  <p class="text-brand-muted leading-relaxed">
+                    {group.items.join(' · ')}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-bold font-display mb-6">
+              {cvDataEN.languagesTitle}
+            </h2>
+
+            <div class="space-y-4">
+              {cvDataEN.languages.map((language) => (
+                <div class="flex justify-between gap-4">
+                  <span>{language.name}</span>
+
+                  <span class="text-brand-muted text-right">
+                    {language.level}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-bold font-display mb-6">
+              {cvDataEN.additionalTitle}
+            </h2>
+
+            <p class="text-brand-muted leading-relaxed">
+              {cvDataEN.additional}
+            </p>
+          </section>
+
+        </aside>
+      </div>
+
+      <section
+        id="request-cv"
+        class="mt-24 p-8 md:p-12 rounded-2xl border border-brand-cyan/20 bg-white/5"
+      >
+        <p class="text-sm font-mono uppercase tracking-widest text-brand-cyan mb-4">
+          {cvDataEN.requestCV.label}
+        </p>
+
+        <h2 class="text-2xl md:text-3xl font-bold font-display mb-4">
+          {cvDataEN.requestCV.title}
+        </h2>
+
+        <p class="text-brand-muted leading-relaxed max-w-2xl">
+          {cvDataEN.requestCV.description}
+        </p>
+
+        <div class="mt-6">
+          <span class="inline-flex px-5 py-3 rounded-lg bg-brand-cyan text-brand-bg font-semibold">
+            {cvDataEN.requestCV.button}
+          </span>
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>

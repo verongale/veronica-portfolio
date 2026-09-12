@@ -7,8 +7,9 @@ import MatrixSection from '../components/Matrix';
 import Footer from '../components/Footer';
 import Skills from '../components/Skills';
 import MinorProjects from '../components/MinorProjects';
+import NavbarCv from '../components/NavbarCv';
 
-import { projectsDataIT, matrixPointsIT, heroTextIT, footerTextIT, navTextIT, skillsIT, minorProjectsIT } from '../data/translation-it';
+import { projectsDataIT, matrixPointsIT, heroTextIT, footerTextIT, navTextIT, skillsIT, minorProjectsIT, navCvTextIT } from '../data/translation-it';
 ---
 
 <html lang="it">
@@ -19,12 +20,12 @@ import { projectsDataIT, matrixPointsIT, heroTextIT, footerTextIT, navTextIT, sk
   </head>
   <body class="bg-brand-bg text-brand-text antialiased">
     
-    <Navbar 
+    <NavbarCv 
       client:load 
-      linkHome={navTextIT.linkHome}
-      navProjects={navTextIT.navProjects}
-      navPhilosophy={navTextIT.navPhilosophy}
-      navContact={navTextIT.navContact}
+      linkHome={navCvTextIT.linkHome}
+      navProjects={navCvTextIT.navProjects}
+      navCv={navCvTextIT.navCv}
+      navContact={navCvTextIT.navContact}
     />
     
     <main class="w-full flex flex-col items-center pt-5 pb-16 space-y-24">

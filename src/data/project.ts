@@ -111,8 +111,173 @@ export const navTextEN = {
   navPhilosophy: "My Approach", 
   navContact: "Contact" 
 }; 
+
+export const navCvTextEN = {
+  linkHome: "/",
+  navProjects: "Projects",
+  navCv: "Resume",
+  navContact: "Contact"
+};
  
 export const skillsEN = [ 
   "React", "TypeScript", "Next.js", "Astro", "Tailwind CSS",  
   "JavaScript", "UI & UX", "PHP", "SQL", "Git", "Wordpress", "Figma", "Canva", "Affinity"
 ];
+
+export const cvDataEN = {
+  header: {
+    label: "Curriculum Vitae",
+    name: "Veronica Galeazzo",
+    role: "Web Designer & Front-End Developer",
+    intro:
+      "I work across design and development, combining visual thinking with front-end implementation to build clear, functional and responsive digital experiences.",
+  },
+
+  profile: {
+    title: "Professional Profile",
+    text:
+      "My experience spans website and web application development, WordPress and CMS-based projects, UI/UX design, landing pages, e-commerce and SEO analysis. I work across the visual and technical sides of digital projects, with a focus on turning requirements and ideas into concrete, usable interfaces.",
+  },
+
+  experienceTitle: "Work Experience",
+
+  experience: [
+    {
+      role: "Web Designer — Freelance",
+      period: "Dec 2025 – Present",
+      responsibilities: [
+        "Showcase website development using custom code or CMS platforms such as WordPress",
+        "Front-end development for websites and web applications",
+        "Back-end development for websites and management systems",
+        "SEO analysis",
+      ],
+    },
+    {
+      role: "Web Designer — Networkers",
+      period: "Sep 2025 – Sep 2026",
+      responsibilities: [
+        "Showcase website development using custom code or WordPress",
+        "E-commerce development and management",
+        "UI/UX design",
+        "Landing page design",
+      ],
+    },
+    {
+      role: "Intern — Bagubits, Cuneo",
+      period: "Jun 2024 – Aug 2024",
+      responsibilities: [
+        "Showcase website development using custom code or WordPress",
+        "Front-end development for websites and web applications",
+        "Back-end development for websites and management systems",
+        "SEO analysis",
+      ],
+    },
+    {
+      role:
+        "Academic Director & English Teacher — The One School of Languages, Cuneo",
+      period: "Jul 2021 – Oct 2022",
+      responsibilities: [
+        "Course supervision",
+        "Front office",
+        "English teaching",
+      ],
+    },
+  ],
+
+  educationTitle: "Education",
+
+  education: [
+    {
+      title: "En.A.I.P. — TIC: Programming & Software Development",
+      description:
+        "Focus on computer science fundamentals and programming and software development techniques.",
+      qualification: "",
+    },
+    {
+      title:
+        "University Course in Performing and Visual Arts — UCLA, Los Angeles",
+      description:
+        "University-level coursework focused on performing and visual arts.",
+      qualification: "",
+    },
+    {
+      title: "ITS-ICT Piemonte — Communication Technician",
+      description:
+        "Training in filming, editing, sound design, graphic design and computer science.",
+      qualification:
+        "Qualification: Higher Technical Education diploma in videomaking.",
+    },
+    {
+      title:
+        'Liceo Classico e Scientifico "S. Pellico-G. Peano" — Bilingual',
+      description:
+        "Humanities and foreign languages.",
+      qualification: "Qualification: Classical High School Diploma.",
+    },
+  ],
+
+  skillsTitle: "Technical Skills",
+
+  skills: [
+    {
+      category: "Front-End & Web",
+      items: [
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "Bootstrap",
+        "Responsive Web Interfaces",
+        "Modern UI Implementation",
+        "Web Performance Optimization",
+      ],
+    },
+    {
+      category: "Back-End & Data",
+      items: ["PHP (basic)", "MySQL"],
+    },
+    {
+      category: "CMS & Tools",
+      items: ["WordPress", "Figma", "Microsoft Office", "Windows"],
+    },
+    {
+      category: "Other",
+      items: ["UI/UX Design", "E-commerce", "Landing Pages", "SEO Analysis"],
+    },
+  ],
+
+  languagesTitle: "Languages",
+
+  languages: [
+    {
+      name: "Italian",
+      level: "Native",
+    },
+    {
+      name: "English",
+      level: "C2 / Professional proficiency",
+    },
+    {
+      name: "French",
+      level: "B1",
+    },
+    {
+      name: "Spanish",
+      level: "B1",
+    },
+  ],
+
+  additionalTitle: "Additional Information",
+
+  additional: "Driving licence: B1",
+
+  requestCV: {
+    label: "Full CV",
+    title: "Need the complete CV?",
+    description:
+      "The full CV, including contact details and additional information, is available upon request.",
+    button: "Request Full CV",
+  },
+};
