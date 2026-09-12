@@ -71,7 +71,7 @@ export const POST: APIRoute = async ({ request }) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'Portfolio <onboarding@resend.dev>',
+        from: 'Veronica Galeazzo <hello@veronicagaleazzo.it>',
         to: [recipientEmail],
         reply_to: email,
         subject: `CV request from ${name}`,
