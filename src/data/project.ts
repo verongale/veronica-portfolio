@@ -23,6 +23,16 @@ export const projectsData: Project[] = [
     isCommercial: true
   },
   {
+    title: "Veronica Galeazzo Portfolio",
+    subtitle: "Astro, React & Tailwind CSS — Personal Portfolio",
+    metric: "Custom Design & Full-Stack Development",
+    description: "Design and development of my professional portfolio as a bilingual digital experience. I handled the entire project, from UI/UX design to front-end development with Astro, React, and Tailwind CSS, including the integration of a contact system, domain management, and production deployment.",
+    badge: "Astro / React / Tailwind CSS",
+    link: "https://github.com/verongale/veronica-portfolio",
+    image: "/portfolio-mockup.jpeg",
+    isCommercial: false
+  },
+  {
     title: "ReceiptApp Architecture",
     subtitle: "Next.js, React & TypeScript (Independent Tech R&D)",
     metric: "Work In Progress",
@@ -65,7 +75,25 @@ export const minorProjectsEN: MinorProject[] = [
     title: "Collina delle Rondini Website",
     description: "WordPress website developed with Divi Builder, custom CSS, and JavaScript to deliver a tailored user experience.",
     link: "https://lacollinadellerondini.it" 
-  } 
+  },
+  {
+  year: "2025",
+  title: "Cornaglia Fratelli Website",
+  description: "Corporate WordPress website for a construction company.",
+  link: "https://www.cornagliafratelli.it/"
+},
+{
+  year: "2026",
+  title: "La Targa Website",
+  description: "WordPress website for a signage and printing company.",
+  link: "https://latarga.net/"
+},
+{
+  year: "2025",
+  title: "Edilcotto 2.0 Website",
+  description: "Corporate WordPress website for a construction company.",
+  link: "https://edilcotto2.it/"
+}
 ]; 
  
  
