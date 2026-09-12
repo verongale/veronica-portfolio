@@ -2,6 +2,7 @@
 import '../../src/styles/global.css';
 import { cvDataIT , navCvTextIT } from '../data/translation-it';
 import NavbarCv from '../components/NavbarCv';
+import RequestCvForm from '../components/RequestCvForm';
 ---
 
 <html lang="it">
@@ -189,11 +190,19 @@ import NavbarCv from '../components/NavbarCv';
           {cvDataIT.requestCV.description}
         </p>
 
-        <div class="mt-6">
-          <span class="inline-flex px-5 py-3 rounded-lg bg-brand-cyan text-brand-bg font-semibold">
-            {cvDataIT.requestCV.button}
-          </span>
-        </div>
+        <RequestCvForm
+          client:load
+          formTitle="Richiedi il mio CV completo"
+          nameLabel="Nome"
+          namePlaceholder="Il tuo nome"
+          emailLabel="Email"
+          emailPlaceholder="email@example.com"
+          messageLabel="Messaggio (opzionale)"
+          messagePlaceholder="Lascia un messaggio..."
+          submitLabel="Invia richiesta"
+          successMessage="La tua richiesta è stata inviata. Ti ricontatterò al più presto."
+          errorMessage="Qualcosa è andato storto. Riprova più tardi."
+        />
       </section>
 
     </main>

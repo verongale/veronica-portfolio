@@ -2,6 +2,7 @@
 import '../../src/styles/global.css';
 import { cvDataEN , navCvTextEN } from '../data/project';
 import NavbarCv from '../components/NavbarCv';
+import RequestCvForm from '../components/RequestCvForm';
 
 ---
 
@@ -193,11 +194,19 @@ import NavbarCv from '../components/NavbarCv';
           {cvDataEN.requestCV.description}
         </p>
 
-        <div class="mt-6">
-          <span class="inline-flex px-5 py-3 rounded-lg bg-brand-cyan text-brand-bg font-semibold">
-            {cvDataEN.requestCV.button}
-          </span>
-        </div>
+        <RequestCvForm
+          client:load
+          formTitle="Request my full CV"
+          nameLabel="Name"
+          namePlaceholder="Your name"
+          emailLabel="Email"
+          emailPlaceholder="you@example.com"
+          messageLabel="Message (optional)"
+          messagePlaceholder="Tell me a little about your request..."
+          submitLabel="Send request"
+          successMessage="Your request has been sent. I'll get back to you shortly."
+          errorMessage="Something went wrong. Please try again later."
+/>
       </section>
 
     </main>
