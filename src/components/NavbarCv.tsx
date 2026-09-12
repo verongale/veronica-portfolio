@@ -10,6 +10,7 @@ interface NavbarCvProps {
 export default function Navbar({ linkHome, navProjects, navCv, navContact }: NavbarCvProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [currentPath, setCurrentPath] = useState('');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     setCurrentPath(window.location.pathname);
@@ -30,43 +31,164 @@ export default function Navbar({ linkHome, navProjects, navCv, navContact }: Nav
   const isCv = currentPath.includes('/cv');
   const isItCv = currentPath.includes('/it-cv');
 
+  
+  const languageLink = isCv
+    ? (isIt ? '/cv' : '/it-cv')
+    : isItCv
+      ? '/cv'
+      : (isIt ? '/' : '/it');
+
+  const languageLabel = isIt ? 'en' : 'it';
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 selection:bg-brand-cyan selection:text-brand-bg ${
-      isScrolled 
-        ? 'bg-brand-bg/75 backdrop-blur-lg py-3 shadow-lg' 
-        : 'bg-transparent pt-5 py-3'
-    }`}>
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 selection:bg-brand-cyan selection:text-brand-bg ${
+        isScrolled
+          ? 'bg-brand-bg/75 backdrop-blur-lg py-3 shadow-lg'
+          : 'bg-transparent pt-5 py-3'
+      }`}
+    >
       <div className="max-w-4xl mx-auto px-6 h-16 flex justify-between items-center">
-        
-        <a href={isIt ? '/it' : '/'} className="flex items-center transition-transform hover:scale-102 duration-200">
-          <img 
-            src="/vg-logo.png" 
-            alt="Veronica Galeazzo Logo" 
-            className="h-8 w-auto object-contain" 
+
+       
+        <a
+          href={isIt ? '/it' : '/'}
+          onClick={closeMenu}
+          className="flex items-center transition-transform hover:scale-102 duration-200"
+        >
+          <img
+            src="/vg-logo.png"
+            alt="Veronica Galeazzo Logo"
+            className="h-8 w-auto object-contain"
           />
         </a>
 
-        <div className="flex space-x-6 text-lg text-brand-muted font-display items-center font-bold">
-          <a href={ isIt ? '/it-cv' : '/cv' } className="hover:text-brand-text transition-colors">
+        
+        <div className="hidden md:flex space-x-6 text-lg text-brand-muted font-display items-center font-bold">
+
+          <a
+            href={isIt ? '/it-cv' : '/cv'}
+            className="hover:text-brand-text transition-colors"
+          >
             {navCv}
           </a>
-          <a href="/#projects" className="hover:text-brand-text transition-colors">
+
+          <a
+            href="/#projects"
+            className="hover:text-brand-text transition-colors"
+          >
             {navProjects}
-          </a>    
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-brand-text hover:text-brand-cyan transition-colors font-bold">
+          </a>
+
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-brand-text hover:text-brand-cyan transition-colors font-bold"
+          >
             {navContact}
           </a>
 
           <div className="w-[1px] h-4 bg-white/10 mx-1"></div>
 
+          
           <a
-            href={isCv ? (isIt ? '/cv' : '/it-cv') : isItCv ? '/cv' : (isIt ? '/' : '/it')}
+            href={languageLink}
             className="text-xs font-mono px-2 py-1 rounded bg-white/5 border border-white/10 text-brand-text hover:bg-white/10 hover:border-brand-cyan transition-all uppercase tracking-wider font-bold"
-            >
-            {isIt ? 'en' : 'it'}
-            </a>
+          >
+            {languageLabel}
+          </a>
+
         </div>
 
+        
+        <div className="md:hidden flex items-center gap-3 ">
+
+          
+          <a
+            href={languageLink}
+            className="text-xs font-mono px-2 py-1 rounded bg-white/5 border border-white/10 text-brand-text hover:bg-white/10 hover:border-brand-cyan transition-all uppercase tracking-wider font-bold"
+          >
+            {languageLabel}
+          </a>
+
+          
+          <button
+            type="button"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="relative flex items-center justify-center w-10 h-10 text-brand-text"
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isMenuOpen}
+            >
+            <span
+                className={`absolute block w-6 h-[2px] bg-current transition-transform duration-300 ${
+                isMenuOpen
+                    ? 'rotate-45'
+                    : '-translate-y-[4px]'
+                }`}
+            />
+
+            <span
+                className={`absolute block w-6 h-[2px] bg-current transition-opacity duration-300 ${
+                isMenuOpen
+                    ? 'opacity-0'
+                    : 'opacity-100'
+                }`}
+            />
+
+            <span
+                className={`absolute block w-6 h-[2px] bg-current transition-transform duration-300 ${
+                isMenuOpen
+                    ? '-rotate-45'
+                    : 'translate-y-[4px]'
+                }`}
+            />
+            </button>
+
+        </div>
+      </div>
+
+      
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ${
+          isMenuOpen
+            ? 'max-h-96 opacity-100'
+            : 'max-h-0 opacity-0'
+        }`}
+      >
+        <div className="px-6 pb-6 pt-4 flex flex-col gap-5 text-lg text-brand-muted font-display font-bold bg-brand-bg/95 backdrop-blur-lg border-t border-white/10">
+
+          <a
+            href={isIt ? '/it-cv' : '/cv'}
+            onClick={closeMenu}
+            className="hover:text-brand-text transition-colors"
+          >
+            {navCv}
+          </a>
+
+          <a
+            href="/#projects"
+            onClick={closeMenu}
+            className="hover:text-brand-text transition-colors"
+          >
+            {navProjects}
+          </a>
+
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={closeMenu}
+            className="text-brand-text hover:text-brand-cyan transition-colors"
+          >
+            {navContact}
+          </a>
+
+        </div>
       </div>
     </nav>
   );
