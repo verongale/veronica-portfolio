@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 interface RequestCvFormProps {
-  formTitle: string;
+  
   nameLabel: string;
   namePlaceholder: string;
   emailLabel: string;
@@ -14,7 +14,7 @@ interface RequestCvFormProps {
 }
 
 export default function RequestCvForm({
-  formTitle,
+  
   nameLabel,
   namePlaceholder,
   emailLabel,
@@ -61,9 +61,7 @@ export default function RequestCvForm({
 
   return (
     <div className="mt-8 max-w-2xl">
-      <h3 className="text-xl font-semibold font-display mb-6">
-        {formTitle}
-      </h3>
+      
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <div

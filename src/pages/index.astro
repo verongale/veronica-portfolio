@@ -8,8 +8,9 @@ import Footer from '../components/Footer';
 import Skills from '../components/Skills';
 import MinorProjects from '../components/MinorProjects';
 import NavbarCv from '../components/NavbarCv';
+import RequestCvForm from '../components/RequestCvForm';
 
-import { projectsData, matrixPointsEN, heroTextEN, footerTextEN, navTextEN, skillsEN, minorProjectsEN, navCvTextEN } from '../data/project';
+import { projectsData, matrixPointsEN, heroTextEN, footerTextEN, navTextEN, skillsEN, minorProjectsEN, navCvTextEN, cvDataEN } from '../data/project';
 ---
 
 <html lang="en">
@@ -38,6 +39,7 @@ import { projectsData, matrixPointsEN, heroTextEN, footerTextEN, navTextEN, skil
         manifesto={heroTextEN.manifesto}
         buttonWork={heroTextEN.buttonWork}
         buttonContact={heroTextEN.buttonContact}
+        isIt={false}
       />
       
 	  <Skills client:load skills={skillsEN} /> 
@@ -68,14 +70,20 @@ import { projectsData, matrixPointsEN, heroTextEN, footerTextEN, navTextEN, skil
           points={matrixPointsEN} 
         />
       </div>
+
+
+      
+        
       
       <div class="max-w-6xl w-full px-6">
-        <Footer 
-          client:load 
-          title={footerTextEN.title}
-          description={footerTextEN.description}
-          buttonText={footerTextEN.buttonText}
-        />
+        <Footer
+        client:load
+        title={footerTextEN.title}
+        description={footerTextEN.description}
+        buttonText={footerTextEN.buttonText}
+        isIt={false}
+      />
+        
       </div>
     </main>
   </body>

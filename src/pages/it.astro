@@ -38,6 +38,7 @@ import { projectsDataIT, matrixPointsIT, heroTextIT, footerTextIT, navTextIT, sk
         manifesto={heroTextIT.manifesto}
         buttonWork={heroTextIT.buttonWork}
         buttonContact={heroTextIT.buttonContact}
+        isIt={true}
       />
       
 	  <Skills client:load skills={skillsIT} /> 
@@ -70,11 +71,12 @@ import { projectsDataIT, matrixPointsIT, heroTextIT, footerTextIT, navTextIT, sk
       </div>
       
       <div class="max-w-6xl w-full px-6">
-        <Footer 
-          client:load 
+        <Footer
+          client:load
           title={footerTextIT.title}
           description={footerTextIT.description}
           buttonText={footerTextIT.buttonText}
+          isIt={true}
         />
       </div>
     </main>

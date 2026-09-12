@@ -6,9 +6,11 @@ interface HeroProps {
   manifesto: string;
   buttonWork: string;
   buttonContact: string;
+  isIt?: boolean; 
 }
 
-export default function Hero({ welcome, titleBefore, role, manifesto, buttonWork, buttonContact }: HeroProps) {
+export default function Hero({ welcome, titleBefore, role, manifesto, buttonWork, buttonContact, isIt }: HeroProps) {
+  const cvLink = isIt ? '/it-cv/#request-cv' : '/cv/#request-cv';
   return (
     <section className="relative w-[95vw] min-h-[85vh] mx-auto rounded-3xl overflow-hidden flex items-center p-8 md:p-16 selection:bg-brand-cyan selection:text-brand-bg bg-brand-bg">
       
@@ -56,7 +58,7 @@ export default function Hero({ welcome, titleBefore, role, manifesto, buttonWork
             {buttonWork}
           </a>
           <a 
-            href="#contact" 
+            href={cvLink} 
             className="bg-white/5 border border-white/10 hover:bg-white/10 text-brand-text font-medium font-display px-6 py-3 rounded-xl transition-all duration-200 text-center text-sm"
           >
             {buttonContact}

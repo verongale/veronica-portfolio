@@ -91,18 +91,18 @@ export const matrixPointsIT = [
 ]; 
  
 export const heroTextIT = { 
-  welcome: "Full-Time · Part-Time · B2B / Partita IVA · Remote", 
+  welcome: "Full-Time · Part-Time · B2B / Partita IVA · Remoto", 
   titleBefore: "Ciao, sono", 
   role: "Web Designer & Front-End Developer", 
   manifesto: "Unisco competenze di design e sviluppo per trasformare progetti e idee in interfacce digitali concrete, curate e funzionali.",  
-  buttonWork: "Guarda i Progetti", 
-  buttonContact: "Connettiamoci" 
+  buttonWork: "Progetti", 
+  buttonContact: "Contatti" 
 }; 
  
 export const footerTextIT = { 
   title: "Costruiamo qualcosa insieme.", 
   description: "Sono aperta a opportunità Full-Time e Part-Time, così come a collaborazioni B2B in regime di Partita IVA. Valuto opportunità in Italia e collaborazioni da remoto con team internazionali.", 
-  buttonText: "Connettiti su LinkedIn" 
+  buttonText: "Contattami" 
 }; 
  
 export const navTextIT = { 
@@ -274,10 +274,10 @@ export const cvDataIT = {
   additional: "Patente di guida: B1",
 
   requestCV: {
-    label: "CV completo",
-    title: "Vuoi ricevere il CV completo?",
+    label: "Contattami",
+    title: "Parla con me",
     description:
-      "Il CV completo, comprensivo dei dati di contatto e delle informazioni aggiuntive, è disponibile su richiesta.",
-    button: "Richiedi il CV completo",
+      "Interessato a collaborare, a discutere di un'opportunità o semplicemente a saperne di più sulla mia esperienza? Non esitare a contattarmi. Posso anche fornire il mio CV completo e riferimenti professionali su richiesta.",
+    button: "Invia Messaggio",
   },
 };

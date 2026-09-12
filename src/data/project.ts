@@ -102,7 +102,7 @@ export const heroTextEN = {
 export const footerTextEN = { 
   title: "Let's build something together.", 
   description: "I'm open to Full-Time and Part-Time roles, as well as B2B contracting through my Italian VAT setup. I'm interested in working remotely with international teams across Europe.", 
-  buttonText: "Connect on LinkedIn" 
+  buttonText: "Get in touch" 
 }; 
  
 export const navTextEN = { 
@@ -274,10 +274,10 @@ export const cvDataEN = {
   additional: "Driving licence: B1",
 
   requestCV: {
-    label: "Full CV",
-    title: "Need the complete CV?",
+    label: "Get in Touch",
+    title: "Let's Connect",
     description:
-      "The full CV, including contact details and additional information, is available upon request.",
-    button: "Request Full CV",
+      "Interested in working together, discussing an opportunity, or simply learning more about my experience? Feel free to get in touch. I can also provide my full CV and professional references upon request.",
+    button: "Send Message",
   },
 };
