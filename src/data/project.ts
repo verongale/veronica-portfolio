@@ -36,7 +36,7 @@ export const projectsData: Project[] = [
     title: "ReceiptApp Architecture",
     subtitle: "Next.js, React & TypeScript (Independent Tech R&D)",
     metric: "Work In Progress",
-    description: "A type-safe personal finance application developed as an independent R&D project, focused on component architecture, compile-time safety, and modern state management patterns.",
+    description: "A personal finance application built around a real everyday need. Developed as an independent R&D project, it allows me to explore type-safe development, component architecture, database design, and modern application patterns while building a tool I genuinely intend to use.",
     badge: "Next.js / React / TypeScript",
     link: "https://github.com/verongale/receiptapp",
     image: "/receiptapp.jpeg",
