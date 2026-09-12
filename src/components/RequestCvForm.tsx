@@ -66,7 +66,20 @@ export default function RequestCvForm({
       </h3>
 
       <form onSubmit={handleSubmit} className="space-y-6">
-        {/* Name */}
+        <div
+          aria-hidden="true"
+          className="absolute -left-[9999px] h-0 w-0 overflow-hidden"
+        >
+          <label htmlFor="website">Website</label>
+          <input
+            id="website"
+            name="website"
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+          />
+        </div>
+
         <div>
           <label
             htmlFor="cv-name"
@@ -86,7 +99,6 @@ export default function RequestCvForm({
           />
         </div>
 
-        {/* Email */}
         <div>
           <label
             htmlFor="cv-email"
@@ -106,7 +118,6 @@ export default function RequestCvForm({
           />
         </div>
 
-        {/* Message */}
         <div>
           <label
             htmlFor="cv-message"
@@ -125,7 +136,6 @@ export default function RequestCvForm({
           />
         </div>
 
-        {/* Submit */}
         <div>
           <button
             type="submit"
@@ -136,7 +146,6 @@ export default function RequestCvForm({
           </button>
         </div>
 
-        {/* Status */}
         {status === 'success' && (
           <p className="text-sm text-brand-cyan leading-relaxed">
             {successMessage}

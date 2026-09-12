@@ -7,6 +7,19 @@ export const POST: APIRoute = async ({ request }) => {
     const name = formData.get('name')?.toString().trim();
     const email = formData.get('email')?.toString().trim();
     const message = formData.get('message')?.toString().trim() || '';
+    const website = formData.get('website')?.toString().trim() || '';
+
+    if (website) {
+        return new Response(
+          JSON.stringify({ success: true }),
+          {
+            status: 200,
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          }
+        );
+      }
 
     if (!name || !email) {
       return new Response(
