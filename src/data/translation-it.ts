@@ -164,7 +164,7 @@ export const cvDataIT = {
   profile: {
     title: "Profilo Professionale",
     text:
-      "La mia esperienza comprende la realizzazione di siti web e applicativi, progetti con WordPress e CMS, design UI/UX, landing page, e-commerce e analisi SEO. Lavoro tra la componente visiva e quella tecnica dei progetti digitali, trasformando requisiti e idee in interfacce concrete, funzionali e utilizzabili.",
+      "La mia esperienza comprende la realizzazione di siti web e applicativi, progetti con WordPress e CMS, design UI/UX, landing page, e-commerce e analisi SEO. Lavoro tra la componente visiva e quella tecnica dei progetti digitali, trasformando richieste e idee in interfacce concrete, funzionali e utilizzabili.",
   },
 
   experienceTitle: "Esperienza Professionale",
@@ -178,6 +178,8 @@ export const cvDataIT = {
         "Sviluppo front-end di siti web e applicativi",
         "Sviluppo back-end di siti web e gestionali",
         "Analisi SEO",
+        "Design UI/UX",
+        "Grafica digitale e creazione di contenuti visivi",
       ],
     },
     {
@@ -255,6 +257,8 @@ export const cvDataIT = {
         "CSS3",
         "React",
         "Next.js",
+        "TypeScript",
+        "Astro",
         "Tailwind CSS",
         "Bootstrap",
         "Interfacce Web Responsive",
@@ -264,15 +268,15 @@ export const cvDataIT = {
     },
     {
       category: "Back-End & Database",
-      items: ["PHP (conoscenze di base)", "MySQL"],
+      items: ["PHP", "Next.js", "MySQL", "Prisma ORM"],
     },
     {
       category: "CMS & Strumenti",
-      items: ["WordPress", "Figma", "Microsoft Office", "Windows"],
+      items: ["WordPress", "Figma", "Microsoft Office", "Windows", "Affinity Suite", "Canva", "Git", "VS Code"],
     },
     {
       category: "Altro",
-      items: ["UI/UX Design", "E-commerce", "Landing Page", "Analisi SEO"],
+      items: ["UI/UX Design", "E-commerce", "Landing Page"],
     },
   ],
 

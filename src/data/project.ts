@@ -164,7 +164,7 @@ export const cvDataEN = {
   profile: {
     title: "Professional Profile",
     text:
-      "My experience spans website and web application development, WordPress and CMS-based projects, UI/UX design, landing pages, e-commerce and SEO analysis. I work across the visual and technical sides of digital projects, with a focus on turning requirements and ideas into concrete, usable interfaces.",
+      "My experience spans website and web application development, WordPress and CMS-based projects, UI/UX design, landing pages, e-commerce and SEO analysis. I work across the visual and technical sides of digital projects, with a focus on turning projects and ideas into concrete, usable interfaces.",
   },
 
   experienceTitle: "Work Experience",
@@ -198,6 +198,9 @@ export const cvDataEN = {
         "Front-end development for websites and web applications",
         "Back-end development for websites and management systems",
         "SEO analysis",
+        "Digital graphic design and visual content creation",
+        "UI/UX design",
+        
       ],
     },
     {
@@ -255,6 +258,8 @@ export const cvDataEN = {
         "CSS3",
         "React",
         "Next.js",
+        "TypeScript",
+        "Astro",        
         "Tailwind CSS",
         "Bootstrap",
         "Responsive Web Interfaces",
@@ -264,15 +269,15 @@ export const cvDataEN = {
     },
     {
       category: "Back-End & Data",
-      items: ["PHP (basic)", "MySQL"],
+      items: ["PHP", "Next.js", "MySQL", "Prisma ORM"],
     },
     {
       category: "CMS & Tools",
-      items: ["WordPress", "Figma", "Microsoft Office", "Windows"],
+      items: ["WordPress", "Figma", "Microsoft Office", "Windows", "Affinity Suite", "Canva", "Git", "VS Code"],
     },
     {
       category: "Other",
-      items: ["UI/UX Design", "E-commerce", "Landing Pages", "SEO Analysis"],
+      items: ["UI/UX Design", "E-commerce", "Landing Pages"],
     },
   ],
 
