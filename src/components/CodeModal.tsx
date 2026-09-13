@@ -20,7 +20,7 @@ export default function CodeModal({
             Ma dov'è il divertimento?
           </>
         ),
-        viewCode: 'Vedi il codice',
+        viewCode: 'Vedi Codice →',
         later: 'Magari dopo',
       }
     : {
@@ -31,7 +31,7 @@ export default function CodeModal({
             But where's the fun in that?
           </>
         ),
-        viewCode: 'View the code',
+        viewCode: 'View Code →',
         later: 'Maybe later',
       };
 
@@ -40,7 +40,7 @@ export default function CodeModal({
       <button
         type="button"
         onClick={() => setIsOpen(true)}
-        className="..."
+        className="text-xs font-bold text-brand-text hover:text-brand-cyan hover:cursor-pointer transition-colors flex items-center space-x-1"
       >
         {content.viewCode}
       </button>

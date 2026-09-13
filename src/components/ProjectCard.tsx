@@ -1,11 +1,14 @@
 import React from 'react';
 import type { Project } from '../data/project.ts'; 
+import CodeModal from './CodeModal.tsx';
 
 interface ProjectCardProps {
   project: Project;
+  isIt: boolean;
 }
 
-export default function ProjectCard({ project }: ProjectCardProps) {
+export default function ProjectCard({ project, isIt }: ProjectCardProps) {
+  const isReceiptApp = project.title === 'ReceiptApp Architecture';
   return (
     <div className="group bg-white/[0.02] border border-white/10 rounded-2xl overflow-hidden flex flex-col justify-between backdrop-blur-md transition-all duration-300 hover:border-white/20 hover:bg-white/[0.04]">
       
@@ -53,20 +56,27 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <span className="text-xs font-mono text-brand-muted bg-white/[0.05] px-2 py-1 rounded-full">
             {project.badge}
           </span>
-          <a 
-            href={project.link} 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="text-xs font-bold text-brand-text hover:text-brand-cyan transition-colors flex items-center space-x-1"
-          >
-            <span>
-              {project.link.includes('github.com') 
-                ? (project.description.includes('Un tracciatore') ? 'Vedi Codice' : 'View Code')
-                : (project.description.includes('Un tracciatore') ? 'Visita Sito' : 'Visit Site')
-              }
-            </span>
-            <span>→</span>
-          </a>
+          {isReceiptApp ? (
+            <CodeModal
+              isIt={isIt}
+              githubUrl={project.link}
+            />
+          ) : (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-bold text-brand-text hover:text-brand-cyan transition-colors flex items-center space-x-1"
+            >
+              <span>
+                {project.link.includes('github.com')
+                  ? (isIt ? 'Vedi Codice' : 'View Code')
+                  : (isIt ? 'Visita Sito' : 'Visit Site')
+                }
+              </span>
+              <span>→</span>
+            </a>
+          )}
         </div>
       </div>
       

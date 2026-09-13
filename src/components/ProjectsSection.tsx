@@ -6,9 +6,10 @@ interface ProjectsSectionProps {
   projects: Project[];
   title: string;
   subtitle: string;
+  isIt: boolean;
 }
 
-export default function ProjectsSection({ projects, title, subtitle }: ProjectsSectionProps) {
+export default function ProjectsSection({ projects, title, subtitle, isIt }: ProjectsSectionProps) {
   return (
     <section id="projects" className="space-y-8 pt-24">
       
@@ -23,7 +24,7 @@ export default function ProjectsSection({ projects, title, subtitle }: ProjectsS
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
+          <ProjectCard key={index} project={project} isIt={isIt} />
         ))}
       </div>
 
